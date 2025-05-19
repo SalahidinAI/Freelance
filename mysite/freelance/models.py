@@ -10,11 +10,7 @@ class Skill(models.Model):
 
 
 class UserProfile(AbstractUser):
-    username = models.CharField(max_length=32, unique=True, null=True)
-    first_name = models.CharField(max_length=32)
-    last_name = models.CharField(max_length=32)
     password = models.CharField()
-    email = models.EmailField(unique=True)
     ROLE_CHOICES = (
         ('client', 'client'),
         ('freelancer', 'freelancer'),
